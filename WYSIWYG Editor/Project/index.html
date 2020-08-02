@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WYSIWYG Editor</title>
+    <style>
+        * {
+            /* outline: 1px solid blue;
+            outline-offset: -1px; */
+        }
+        #editor {
+            /* Optional editor window aesthetic */
+            border: 1px solid gainsboro;
+            box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+            border-radius: 0.25em;
+            outline: none;
+
+            /* Optional editor window layout */
+            padding: 0 1em;
+
+            /* Optional editor text style */
+            font-family: sans-serif;
+            line-height: 1.5em;
+        }
+</style>
+</head>
+<body>
+    <!-- Editor Element -->
+    <button onclick="document.execCommand('bold', false, null)">B</button>
+    <button onclick="document.execCommand('italic', false, null)">I</button>
+    <button onclick="document.execCommand('underline', false, null)">U</button>
+    <button onclick="document.execCommand('formatBlock', false, 'h1')">H1</button>
+    <button onclick="document.execCommand('formatBlock', false, 'h2')">H2</button>
+    <button onclick="document.execCommand('undo', false, null)">Undo</button>
+    <button onclick="document.execCommand('redo', false, null)">Redo</button>
+    <button>Underline</button>
+    <div id="editor" contenteditable>
+        <p>Enter your text here...</p>
+    </div>
+
+</body>
+</html>
